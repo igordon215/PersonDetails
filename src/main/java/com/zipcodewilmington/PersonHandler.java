@@ -15,22 +15,27 @@ public class PersonHandler {
     
     public String whileLoop() {
         String result = "";
+        StringBuilder newPerson = new StringBuilder();
         // create a `counter`
+        int counter = 0;
         // while `counter` is less than length of array
             // begin loop
-
-                // use `counter` to identify the `current Person` in the array
-                // get `string Representation` of `currentPerson`
-                // append `stringRepresentation` to `result` variable
-
-            // end loop
-        return result;
+        while (counter < this.personArray.length){
+            newPerson.append(this.personArray[counter]);
+            counter++; // use `counter` to identify the `current Person` in the array
+        }// get `string Representation` of `currentPerson`
+        result = newPerson.toString();
+        // append `stringRepresentation` to `result` variable
+        // end loop
+        System.out.print(newPerson + "\n");
+       return result;
     }
 
 
 
     public String forLoop() {
         String result = "";
+        StringBuilder newPerson = new StringBuilder();
         // identify initial value
         // identify terminal condition
         // identify increment
@@ -41,7 +46,11 @@ public class PersonHandler {
                 // get `string Representation` of `currentPerson`
                 // append `stringRepresentation` to `result` variable
             // end loop
-
+        for(int i = 0; i < personArray.length; i++){
+            newPerson.append(this.personArray[i]);
+        }
+        result = newPerson.toString();
+        System.out.println(newPerson);
         return result;
     }
 
@@ -49,6 +58,7 @@ public class PersonHandler {
 
     public String forEachLoop() {
         String result = "";
+        StringBuilder people = new StringBuilder();
         // identify array's type
         // identify array's variable-name
 
@@ -57,7 +67,11 @@ public class PersonHandler {
                 // get `string Representation` of `currentPerson`
                 // append `stringRepresentation` to `result` variable
             // end loop
-
+        for (Person newPerson: this.personArray){
+            people.append(newPerson);
+        }
+        result = people.toString();
+        System.out.println(people);
         return result;
     }
 
